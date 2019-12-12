@@ -1,9 +1,18 @@
+body {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  min-height: 100vw;
+  overflow: hidden auto;
+}
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  max-height: 10vmin!important;
+  height: 10vmin!important;
 }
 
 .App-header {

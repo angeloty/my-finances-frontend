@@ -1,0 +1,62 @@
+@import "../../styles/Variables.scss";
+.btn.toggler {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: none;
+  z-index: 1;
+  .middle {
+    position: absolute;
+    top: calc(50% - 0.1rem);
+    height: 0.2rem;
+    opacity: 1;
+    background-color: $lightgray;
+    left: calc(5% + .2rem);
+    right: calc(5% + .2rem);
+    transition: opacity ease 0.5s;
+  }
+}
+.btn.toggler:focus {
+  border: transparent;
+  box-shadow: none;
+}
+.btn.toggler.expanded {
+  .middle {
+    opacity: 0;
+  }
+}
+
+.btn.toggler:after,
+.btn.toggler:before {
+  content: "";
+  position: absolute;
+  right: calc(5% + .2rem);
+  left: calc(5% + .2rem);
+  height: 0.2rem;
+  background-color: $lightgray;
+  transition: all ease 0.5s;
+}
+
+.btn.toggler:before {
+  transform: rotate(0);
+  top: calc(10% + .2rem);
+}
+
+.btn.toggler:after {
+  transform: rotate(0);
+  bottom: calc(10% + .2rem);
+}
+
+.btn.toggler.expanded:before {
+  transform: rotate(-45deg);
+  top: calc(50% - .1rem);
+}
+
+.btn.toggler.expanded:after {
+  transform: rotate(45deg);
+  bottom: calc(50% - .1rem);
+}

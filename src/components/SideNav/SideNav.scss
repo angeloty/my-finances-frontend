@@ -1,0 +1,50 @@
+@import "../../modules/shared/styles/Variables.scss";
+.list-group {
+  position: fixed;
+  z-index: 2;
+  min-height: calc(100vh - 50px);
+  top: 80px;
+  border-radius: 0;
+  min-width: 300px;
+  -webkit-transform: translateX(-250px);
+  -moz-transform: translateX(-250px);
+  -o-transform: translateX(-250px);
+  transform: translateX(-250px);
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  padding-top: 50px;
+  -webkit-box-shadow: $rightShadows;
+  -moz-box-shadow: $rightShadows;
+  box-shadow: $rightShadows;
+  background-color: #fff;
+  .list-group-item {
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    align-items: center;
+    color: $lightgray;
+    border: none;
+    border-right: solid .2rem transparent;
+  }
+  .list-group-item.active {
+    color: $primary;
+    border-right: solid .2rem $primary;
+  }
+  .list-group-item:hover {
+    text-decoration: none;
+    border-right: solid .2rem $lightblue;
+  }
+}
+
+.list-group.expanded {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
